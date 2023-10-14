@@ -1,15 +1,14 @@
 import { useState } from "react";
 import { Block } from './Block';
 
-export function ColorPicker () {
+export function ColorPicker (props) {
     const [bool,setBool] = useState(false); 
-    const [colors,setColors] = useState(["red", "black", "lightgreen", "blue", "yellow", "purple", "pink", "green", "violet", "lightgrey", "royalblue", "white", "grey", "orange", "cyan", "brown", "darkgreen"]); 
     const [bg,setBg] = useState(""); 
 
     const Blocks = () => {
         if (bool) {
-            return colors.map ((val) => {
-                return <Block onclick={() => setBg(val)} color={val}></Block>
+            return props.colors.map ((val) => {
+                return <Block onclick={() => {setBg(val); setBool(false);}} color={val}></Block>
             })
         }
     }

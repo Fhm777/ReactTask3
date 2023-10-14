@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="App">
       <h1>Color</h1>
-      <ColorPicker></ColorPicker>
+      <ColorPicker colors={["red", "black", "lightgreen", "blue", "yellow", "purple", "pink", "green", "violet", "lightgrey", "royalblue", "white", "grey", "orange", "cyan", "brown", "darkgreen"]}></ColorPicker>
     </div>
   );
 }
